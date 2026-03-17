@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Antony Family Tree</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #f4f4f4;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        .card {
+            padding: 15px;
+            margin: 10px;
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+            display: inline-block;
+            border: 2px solid #333;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🌳 Antony Fernando Family</h1>
+
+<!-- ENTER BUTTON -->
+<div id="home">
+    <button onclick="showChildren()">Enter Family</button>
+</div>
+
+<!-- CHILDREN LIST -->
+<div id="children" class="hidden">
+    <h2>Children</h2>
+
+    <div class="card" onclick="show('rayappan')">Rayappan FDO</div>
+    <div class="card" onclick="show('thomas')">Thomas FDO</div>
+    <div class="card" onclick="show('valarmathi')">Valarmathi FDO</div>
+
+    <div class="card" onclick="show('rani')">Rani FDO</div>
+    <div class="card" onclick="show('prakash')">Prakash FDO</div>
+    <div class="card" onclick="show('saalvin')">Saalvinsu FDO</div>
+    <div class="card" onclick="show('bevin')">Bevin FDO</div>
+    <div class="card" onclick="show('rosary')">Rosary FDO</div>
+    <div class="card" onclick="show('berkmans')">Berkmans FDO</div>
+    <div class="card" onclick="show('justin')">Justin FDO</div>
+</div>
+
+<!-- FAMILY DETAILS -->
+
+<div id="rayappan" class="hidden">
+    <h2>Rayappan FDO</h2>
+    <p>Wife: Rani</p>
+    <p>Son: Peo</p>
+</div>
+
+<div id="thomas" class="hidden">
+    <h2>Thomas FDO</h2>
+    <p>Wife: Nevi</p>
+    <p>Sons: Prathi, Amalan</p>
+    <p>Daughter: Arockimmal</p>
+</div>
+
+<div id="valarmathi" class="hidden">
+    <h2>Valarmathi FDO</h2>
+    <p>Husband: Kennedy FDO</p>
+    <p>Daughters: Nisha, Kisha</p>
+</div>
+
+<div id="rani" class="hidden">
+    <h2>Rani FDO</h2>
+    <p>Husband: Iruthayaraj Rayan</p>
+    <p>Son: Jones</p>
+    <p>Daughter: Monica</p>
+</div>
+
+<div id="prakash" class="hidden">
+    <h2>Prakash FDO</h2>
+    <p>Wife: Vijaya</p>
+    <p>Sons: Jerin, Jerkin</p>
+</div>
+
+<div id="saalvin" class="hidden">
+    <h2>Saalvinsu FDO</h2>
+    <p>Wife: Magarasi</p>
+    <p>Son: Jesu</p>
+    <p>Daughter: Elisha</p>
+</div>
+
+<div id="bevin" class="hidden">
+    <h2>Bevin FDO</h2>
+    <p>Wife: Siluvai</p>
+    <p>Daughters: Rejoin, Shibani</p>
+</div>
+
+<div id="rosary" class="hidden">
+    <h2>Rosary FDO</h2>
+    <p>Wife: Navamani</p>
+    <p>Daughters: Rabiya, Ranisha, Rashiba</p>
+</div>
+
+<div id="berkmans" class="hidden">
+    <h2>Berkmans FDO</h2>
+    <p>Wife: Nisha (daughter of Valarmathi)</p>
+    <p>Daughter: Abisha</p>
+    <p>Sons: Abishek, Joshua</p>
+</div>
+
+<div id="justin" class="hidden">
+    <h2>Justin FDO</h2>
+    <p>Wife: Fathima</p>
+    <p>Sons: Joel, Jeswin</p>
+</div>
+
+<script>
+function showChildren() {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("children").style.display = "block";
+}
+
+function show(id) {
+    let sections = document.querySelectorAll("div[id]");
+    sections.forEach(sec => sec.classList.add("hidden"));
+
+    document.getElementById("children").classList.remove("hidden");
+    document.getElementById(id).classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
